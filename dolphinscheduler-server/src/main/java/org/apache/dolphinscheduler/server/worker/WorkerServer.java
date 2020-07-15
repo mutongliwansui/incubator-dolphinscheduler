@@ -21,6 +21,7 @@ import org.apache.dolphinscheduler.common.thread.Stopper;
 import org.apache.dolphinscheduler.remote.NettyRemotingServer;
 import org.apache.dolphinscheduler.remote.command.CommandType;
 import org.apache.dolphinscheduler.remote.config.NettyServerConfig;
+import org.apache.dolphinscheduler.server.worker.config.AppConfig;
 import org.apache.dolphinscheduler.server.worker.config.WorkerConfig;
 import org.apache.dolphinscheduler.server.worker.processor.TaskExecuteProcessor;
 import org.apache.dolphinscheduler.server.worker.processor.TaskKillProcessor;
@@ -29,8 +30,7 @@ import org.apache.dolphinscheduler.service.bean.SpringApplicationContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 import javax.annotation.PostConstruct;
@@ -77,8 +77,10 @@ public class WorkerServer {
      * @param args arguments
      */
     public static void main(String[] args) {
+        System.setProperty("spring.profiles.active","worker");
         Thread.currentThread().setName(Constants.THREAD_NAME_WORKER_SERVER);
-        new SpringApplicationBuilder(WorkerServer.class).web(WebApplicationType.NONE).run(args);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+//        new SpringApplicationBuilder(WorkerServer.class).web(WebApplicationType.NONE).run(args);
     }
 
 

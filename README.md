@@ -86,6 +86,7 @@ Dolphin Scheduler uses a lot of excellent open source projects, such as google g
 It is because of the shoulders of these open source projects that the birth of the Dolphin Scheduler is possible. We are very grateful for all the open source software used! We also hope that we will not only be the beneficiaries of open source, but also be open source contributors. We also hope that partners who have the same passion and conviction for open source will join in and contribute to open source!
 
 ### Get Help
+
 1. Submit an issue
 1. Subscribe the mail list : https://dolphinscheduler.apache.org/en-us/docs/development/subscribe.html.  then send mail to dev@dolphinscheduler.apache.org
 1. Slack channel: [![Slack Status](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://join.slack.com/share/zt-do3gvfhj-UUhrAX2GxkVX_~JJt1jpKA)

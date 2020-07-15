@@ -16,27 +16,32 @@
  */
 package org.apache.dolphinscheduler.api.controller;
 
-import org.apache.dolphinscheduler.api.ApiApplicationServer;
 import org.apache.dolphinscheduler.api.service.SessionService;
 import org.apache.dolphinscheduler.common.enums.UserType;
 import org.apache.dolphinscheduler.common.utils.StringUtils;
 import org.apache.dolphinscheduler.dao.entity.User;
-import org.junit.*;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 
 @Ignore
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = ApiApplicationServer.class)
-public class AbstractControllerTest {
+@ContextConfiguration(locations = {"classpath:spring/applicationContext.xml"})
+@WebAppConfiguration
+@RunWith(SpringJUnit4ClassRunner.class)
+public class AbstractControllerTest extends AbstractJUnit4SpringContextTests {
     private static Logger logger = LoggerFactory.getLogger(AbstractControllerTest.class);
     public static final String SESSION_ID = "sessionId";
 

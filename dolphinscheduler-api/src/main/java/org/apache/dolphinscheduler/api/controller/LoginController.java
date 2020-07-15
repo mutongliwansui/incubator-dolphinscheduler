@@ -85,8 +85,8 @@ public class LoginController extends BaseController {
 
         //user name check
         if (StringUtils.isEmpty(userName)) {
-            return error(Status.USER_NAME_NULL.getCode(),
-                    Status.USER_NAME_NULL.getMsg());
+            return error(USER_NAME_NULL.getCode(),
+                    USER_NAME_NULL.getMsg());
         }
 
         // user ip check
@@ -97,7 +97,7 @@ public class LoginController extends BaseController {
 
         // verify username and password
         Result<Map<String, String>> result = authenticator.authenticate(userName, userPassword, ip);
-        if (result.getCode() != Status.SUCCESS.getCode()) {
+        if (result.getCode() != SUCCESS.getCode()) {
             return result;
         }
 

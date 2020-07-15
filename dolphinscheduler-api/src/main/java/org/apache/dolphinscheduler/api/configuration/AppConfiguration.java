@@ -31,7 +31,7 @@ import java.util.Locale;
  * application configuration
  */
 @Configuration
-public class AppConfiguration implements WebMvcConfigurer {
+public class AppConfiguration /*implements WebMvcConfigurer*/ {
 
   public static final String LOGIN_INTERCEPTOR_PATH_PATTERN = "/**/*";
   public static final String LOGIN_PATH_PATTERN = "/login";
@@ -71,7 +71,7 @@ public class AppConfiguration implements WebMvcConfigurer {
   }
 
 
-  @Override
+  /*@Override
   public void addInterceptors(InterceptorRegistry registry) {
     //i18n
     registry.addInterceptor(localeChangeInterceptor());
@@ -86,9 +86,9 @@ public class AppConfiguration implements WebMvcConfigurer {
     registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
     registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     registry.addResourceHandler("/ui/**").addResourceLocations("file:ui/");
-  }
+  }*/
 
-  @Override
+  /*@Override
   public void addViewControllers(ViewControllerRegistry registry) {
     registry.addViewController("/ui/").setViewName("forward:/ui/index.html");
     registry.addViewController("/").setViewName("forward:/ui/index.html");
@@ -97,7 +97,7 @@ public class AppConfiguration implements WebMvcConfigurer {
   @Override
   public void addCorsMappings(CorsRegistry registry) {
     registry.addMapping(PATH_PATTERN).allowedOrigins("*").allowedMethods("*");
-  }
+  }*/
 
 
   /**
@@ -105,10 +105,10 @@ public class AppConfiguration implements WebMvcConfigurer {
    *
    * @param configurer configurer
    */
-  @Override
+  /*@Override
   public void configureContentNegotiation(final ContentNegotiationConfigurer configurer) {
     configurer.favorPathExtension(false);
-  }
+  }*/
 
 
 

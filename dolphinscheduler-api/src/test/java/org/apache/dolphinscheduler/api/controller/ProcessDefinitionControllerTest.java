@@ -13,7 +13,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ *//*
+
 package org.apache.dolphinscheduler.api.controller;
 
 import org.apache.dolphinscheduler.api.enums.Status;
@@ -43,9 +44,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+*/
 /**
  * process definition controller test
- */
+ *//*
+
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class ProcessDefinitionControllerTest{
 
@@ -349,3 +352,4 @@ public class ProcessDefinitionControllerTest{
     }
 
 }
+*/

@@ -33,4 +33,9 @@ public class EncryptionUtils {
       return DigestUtils.md5Hex(null == rawStr ? StringUtils.EMPTY : rawStr);
     }
 
+    public static void main(String[] args) {
+        String md5 = EncryptionUtils.getMd5("123456");
+        System.out.println(md5);
+    }
+
 }
